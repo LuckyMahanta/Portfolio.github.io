@@ -1,0 +1,575 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    background-color: #707a8a;
+    scroll-behavior: smooth;   
+    overflow-x: hidden; 
+}
+
+/* navbar */
+#navbar{
+    position: fixed;
+    display: flex;
+    justify-items: space-between;
+    align-items:center ;
+    width: 100%;
+    padding: 40px 25%;
+    box-shadow: 0 5px 10px rgba(81, 80, 80, 0.3);
+    background-color: #707a8a;    
+    z-index: 100%;
+}
+
+
+#navbar a{
+    font-size: 20px;
+    text-decoration: none;
+    color: lightgray;
+    margin-left: 40px;
+    transition: 0.6s;
+}
+
+#navbar a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: rgb(64, 196, 64);
+    margin: auto;
+    display: block;
+
+}
+
+#navbar a:hover::after{
+    width: 100%;
+    transition: width 0.3s linear;
+}
+
+#header-text-upper {
+    display: flex;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 60px;
+    padding-left: 20%;
+    color: white;
+    font-weight: 600;
+    padding-top: 15%;
+  }
+  
+  #profile-pic {
+    order: 3;
+    margin-top: -40px;
+    padding-left: 200px;
+  }
+  
+  #profile-pic img {
+    width: 300px;
+  }
+  
+  #name-wrapper {
+    margin-left: 10px;
+}
+
+.multi-text {
+      margin-top: -100px;
+    position: absolute;
+    color: rgb(64, 196, 64);
+    font-size: 30px;
+    padding-left: 20%;
+    font-family: "Roboto";
+    font-weight: bolder;
+    z-index: -1;
+  }
+  
+.green-color {
+    color: rgb(64, 196, 64);
+}
+
+/* about me */
+.cover{
+    font: green;
+    padding-top: 200px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    z-index: -1;
+    padding-bottom: 100px;
+}
+
+.box p{    
+    padding-top: 100px;
+    padding-left: 200px;
+    padding-right: 100px;
+    color: white;
+    background-color: #333b50;
+    width: 500px;
+    height: 28px;
+    font-size: 25px;
+    align-items: center;
+}
+
+.box{
+    padding-left: 250px;
+    width: 1000px;
+    padding-bottom: 5px;
+
+}
+
+.button1{
+    padding: 20px 20px;
+    background-color: #333b50;
+    border-color:rgb(64, 196, 64);
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    border: 3px solid rgb(64, 196, 64);
+    text-decoration: none;
+    z-index: 1;
+}
+
+.button{
+    padding-top: 171px;
+    background-color: #333b50;
+    padding-left: 300px;
+    width: 50%;
+    z-index: 2;
+}
+
+.button1:hover{
+    background:rgb(64, 196, 64);
+    cursor: pointer;
+}
+
+.parallax_section{
+    min-height: 102vh;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90.8vw;
+    position: relative;
+}
+.parallax_bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center center;
+    z-index: -2;
+    min-height: 100%;
+    padding-top: 485px;
+    opacity: 60%;
+}
+
+.wrapper-text div.text1{
+    font-size: 60px;
+    height: 10px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    padding-top: 100px;
+}
+
+.wrapper-text div.text2{
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: center;
+    padding-top: 85px;
+}
+
+/* skills */
+#skill-section{
+    width: 100%;
+    height: auto;
+    padding: 80px 0%;
+}
+
+.skill-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+}
+
+.skill-main .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+    color: white;
+    font-weight: 500;
+}
+
+.skill-bar .bar{
+    z-index: -1;
+    width: 425px;
+    height: 10px;
+    position: relative;
+    margin-top: 10px;
+    padding-left: 70px;
+}
+
+.skill-bar .bar span{
+    height: 100%;
+    position: absolute;
+    background-color: rgb(64, 196, 64);
+    border-radius: 25px;
+}
+
+.skill-bar .bar .c-programming-dsa{
+    width: 85%;
+    animation: c-programming 3s;
+}
+
+@keyframes c-programming {
+    0%{
+        width: 0;
+    }100%{
+        width: 85%;
+    }
+}
+
+.skill-bar .bar .cpp-programming-oops{
+    width: 85%;
+    animation: cpp-programming 3s;
+}
+
+@keyframes cpp-programming {
+    0%{
+        width: 0;
+    }100%{
+        width: 85%;
+    }
+}
+
+.skill-bar .bar .java{
+    width: 80%;
+    animation: java 3s;
+}
+
+@keyframes java {
+    0%{
+        width: 0;
+    }100%{
+        width: 80%;
+    }
+}
+
+.skill-bar .bar .js{
+    width: 100%;
+    animation: js 3s;
+}
+
+@keyframes js {
+    0%{
+        width: 0;
+    }100%{
+        width: 100%;
+    }
+}
+
+.skill-bar .bar .html{
+    width: 100%;
+    animation: html 3s;
+}
+
+@keyframes html {
+    0%{
+        width: 0;
+    }100%{
+        width: 100%;
+    }
+}
+
+.skill-bar .bar .restApi{
+    width: 100%;
+    animation: restApi 3s;
+}
+
+@keyframes restApi {
+    0%{
+        width: 0;
+    }100%{
+        width: 100%;
+    }
+}
+
+.skill-bar .bar .reactjs{
+    width: 100%;
+    animation: reactjs 3s;
+}
+
+@keyframes reactjs {
+    0%{
+        width: 0;
+    }100%{
+        width: 100%;
+    }
+}
+
+.skill-bar .bar .expressjs{
+    width: 100%;
+    animation: expressjs 3s;
+}
+
+@keyframes expressjs {
+    0%{
+        width: 0;
+    }100%{
+        width: 100%;
+    }
+}
+
+.skill-bar .bar .nodejs{
+    width: 100%;
+    animation: nodejs 3s;
+}
+
+@keyframes nodejs {
+    0%{
+        width: 0;
+    }100%{
+        width: 100%;
+    }
+}
+
+.skill-bar .bar .mongodb{
+    width: 80%;
+    animation: mongodb 3s;
+}
+
+@keyframes mongodb {
+    0%{
+        width: 0;
+    }100%{
+        width: 80%;
+    }
+}
+
+.skill-bar .bar .materialUi{
+    width: 100%;
+    animation: materialUi 3s;
+}
+
+@keyframes materialUi {
+    0%{
+        width: 0;
+    }100%{
+        width: 100%;
+    }
+}
+
+.skill-bar .bar .git{
+    width: 100%;
+    animation: git 3s;
+}
+
+@keyframes git {
+    0%{
+        width: 0;
+    }100%{
+        width: 100%;
+    }
+}
+
+.skill-bar .bar .github{
+    width: 100%;
+    animation: github 3s;
+}
+
+@keyframes github {
+    0%{
+        width: 0;
+    }100%{
+        width: 100%;
+    }
+}
+
+.skill-bar .bar .npm{
+    width: 100%;
+    animation: npm 3s;
+}
+
+@keyframes npm {
+    0%{
+        width: 0;
+    }100%{
+        width: 100%;
+    }
+}
+
+.img2{
+    position: absolute;
+    background-position: center center;
+    z-index: -1;
+    min-height: 100%;
+    padding-top: 0px;
+    opacity: 20%;
+}
+
+.journey-text{
+    z-index: -1;
+    position: absolute;
+}
+
+
+.journey-text-header{
+    font-size: 60px;
+    height: 40px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    padding-top: 120px;
+}
+
+.codeclause, .krs{
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+    margin: 80px 400px;
+    animation: lightSpeedInLeft; 
+    animation-duration: 3s;
+    color: white;
+    transform: translateX(-200%);
+
+}
+
+.oasisinfobyte, .kiit{
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+    margin: 100px 0;
+    padding-left: 800px;
+    animation: lightSpeedInRight; 
+    animation-duration: 3s;
+    color: white;
+    transform: translateX(100%);
+}
+
+.year{
+    color: rgb(64, 196, 64);
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.codeclause, .krs, .oasisinfobyte, .kiit{
+    z-index: 100%;
+    transition: transform 400ms ease-in;
+}
+
+.slide_in{
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+@keyframes slide_in {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.contact{
+    margin-top: 800px;
+}
+.cover-contact{
+    position: absolute;
+    z-index: -1;
+}
+
+.heading {    
+    padding-top: 120px;
+    padding-left: 150px;
+    padding-right: 200px;
+    color: white;
+    background-color: #333b50;
+    width: 500px;
+    height: 600px;
+    font-size: 25px;
+    align-items: center;
+}
+
+/* contact */
+.contact-text-1{
+    text-align: center;
+}
+
+.box-contact{
+    padding-left: 250px;
+    width: 1000px;
+    z-index: 100%;
+    padding-bottom: 5px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+}
+
+form, input, textarea{
+    padding: 15px;
+    border-radius: 0.5rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+form textarea{
+    resize: none;
+    height: 100px;
+}
+
+.contact-button{
+    padding: 10px 0px;
+    cursor: pointer;
+    background:rgb(64, 196, 64);
+    color: white;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    width: 50%;
+}
+
+.button2{
+    padding-left: 190px;
+}
+
+.button2:hover{
+    background-color: #333b50;
+}
+
+.copyright{
+    margin-top: 50%;
+}
+
+.contact-text{
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+
+/* footer */
+footer{
+    margin-top: 130%;
+    background: #333b50;
+    height: 70px;
+    color: white;
+    text-align: center;
+}
+
+.copyright{
+    padding-top: 40px;
+}
